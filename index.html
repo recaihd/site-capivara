@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Ricardo Sousa" />
+  <meta name="description" content="Redfenix é um servidor de Minecraft Java e Bedrock brasileiro pra original e pirata, temos survival e mini-games com ping baixo, O servidor fica online 24 horas por dia" />
+  <meta name="keywords" content="servidor, minecraft, loja" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Redfenix</title>
+</head>
+
+<body>
+
+  <div class="secao secao1">
+    <div class="overlay"></div>
+
+    <div class="top-bar">
+      <div class="social-icons">
+        <a href="https://discord.gg/f4WbVRtgfn" target="_blank">
+          <img src="https://i.postimg.cc/9X9kdx9t/discord-icon-1024x784-dzjepdg8.png" alt="Discord" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCrtkHq3LK2Puk14FWdRDuVw" target="_blank">
+          <img src="https://i.postimg.cc/7LJcNqGZ/youtube-icon-2048x1437-0zwl4mo9.png" alt="YouTube" />
+        </a>
+        <a href="https://www.tiktok.com/@flymcc" target="_blank">
+          <img src="https://i.postimg.cc/90VT4h40/download-2-removebg-preview.png" alt="Tik Tok" />
+        </a>
+      </div>
+    </div>
+
+    <h1 class="titulo-centralizado">Redfenix</h1>
+
+    <!-- Contador de jogadores -->
+    <div class="contador-online">
+      <div id="online-players" class="numero-jogadores">Carregando...</div>
+      <div class="texto-jogadores">Jogadores Online</div>
+    </div>
+
+  </div>
+
+  <div class="secao secao2">
+    <nav class="menu-links">
+      <h4>
+        <a href="suporte.html"><span>SUPORTE</span></a>
+        <a href="regras.html"><span>REGRAS</span></a>
+        <a href="loja.html"><span>LOJA</span></a>
+        <a href="ip.html"><span>IP</span></a>
+        <a href="sobre.html"><span>SOBRE</span></a>
+      </h4>
+    </nav>
+  </div>
+
+  <div class="secao secao3">
+    <img src="https://i.postimg.cc/zf4Q7hr7/1356033168666267808.gif" alt="Bloco do Minecraft" height="100" width="100">
+    <h3 style="font-family: Arial, Helvetica, sans-serif; color: yellow; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;">
+      Venha se Divertir com a gente<br> no servidor da Redfenix, Online 24<br>horas por dia, Com ping baixo!<br>Java e Bedrock!
+    </h3>
+  </div>
+
+  <div class="secao secao4">
+    <img src="https://i.postimg.cc/1XR1pnpk/image.png" height="40" width="40">
+    <p style="color: rgb(235, 234, 234);">© 2025 Redfenix - Todos os direitos reservados</p>
+  </div>
+
+  <!-- Script do contador de jogadores -->
+  <script>
+    function atualizarJogadores() {
+      fetch("https://api.mcsrvstat.us/2/redfenix.minehost.com.br")
+        .then(response => response.json())
+        .then(data => {
+          if (data.online) {
+            document.getElementById("online-players").innerText = data.players.online;
+          } else {
+            document.getElementById("online-players").innerText = "Offline";
+          }
+        })
+        .catch(error => {
+          console.error('Erro ao buscar status do servidor:', error);
+          document.getElementById("online-players").innerText = "Erro";
+        });
+    }
+
+    atualizarJogadores();
+    setInterval(atualizarJogadores, 60000);
+  </script>
+
+</body>
+</html>

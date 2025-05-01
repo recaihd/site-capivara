@@ -1,0 +1,183 @@
+/* Estilização geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Seções */
+.secao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  flex-direction: column;
+}
+
+/* Primeira seção */
+.secao1 {
+  position: relative;
+  height: 30vh;
+  background-image: url(https://i.postimg.cc/nhcqv0J1/sicalics.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.secao1 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 32, 32, 0.5);
+  z-index: 1;
+}
+
+/* Barra superior */
+.top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.social-icons img[alt="YouTube"]:hover {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(7483%) hue-rotate(357deg) brightness(104%) contrast(115%);
+}
+
+.social-icons img[alt="Discord"]:hover {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(100%) saturate(535%) hue-rotate(196deg) brightness(99%) contrast(94%);
+}
+
+.social-icons img[alt="Tik Tok"]:hover {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(99%) saturate(1648%) hue-rotate(314deg) brightness(97%) contrast(101%);
+}
+
+/* Título */
+.titulo-centralizado {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  color: red;
+  text-shadow: 4px 2px 4px black;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.titulo-centralizado:hover {
+  transform: scale(1.1);
+  text-shadow: 6px 4px 8px black;
+  color: #ff3333;
+}
+
+/* Menu */
+.secao2 {
+  background-color: #262726;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-links h4 {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.menu-links span {
+  margin: 0 5px;
+}
+
+/* Terceira seção */
+.secao3 {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.5)),
+    url(https://i.postimg.cc/Gtp1VLvM/two-minecraft-backgrounds-i-made-first-time-using-shaders-v0-9co6s0m3me9d1.png);
+  background-size: cover;
+  padding: 20px 0;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secao3 img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.secao3 img:hover {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Rodapé */
+.secao4 {
+  background-color: #3a3b3b;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Contador de jogadores */
+.contador-online {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 5;
+}
+
+.numero-jogadores {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px black;
+}
+
+.texto-jogadores {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black;
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
