@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,3 +54,127 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Regras</title>
+  
+  <style>
+    img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .menu-links a {
+    margin: 0 -10px; /* Reduz o espaçamento horizontal entre os links */
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Seção 1 (Topo + redes sociais + título + contador) -->
+  <div class="secao secao1">
+    <div class="overlay"></div>
+    <div class="top-bar">
+      <div class="social-icons">
+        <a href="https://discord.gg/f4WbVRtgfn" target="_blank">
+          <img src="https://i.postimg.cc/9X9kdx9t/discord-icon-1024x784-dzjepdg8.png" alt="Discord" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCrtkHq3LK2Puk14FWdRDuVw" target="_blank">
+          <img src="https://i.postimg.cc/7LJcNqGZ/youtube-icon-2048x1437-0zwl4mo9.png" alt="YouTube" />
+        </a>
+        <a href="https://www.tiktok.com/@flymcc" target="_blank">
+          <img src="https://i.postimg.cc/90VT4h40/download-2-removebg-preview.png" alt="Tik Tok" />
+        </a>
+      </div>
+    </div>
+    <h1 class="titulo-centralizado">Redfenix</h1>
+    <div class="contador-online">
+      <div id="online-players" class="numero-jogadores">Carregando...</div>
+      <div class="texto-jogadores">Jogadores Online</div>
+    </div>
+  </div>
+
+<!-- Seção 2 (Menu) -->
+<div class="secao secao2">
+  <nav class="menu-links">
+    <a href="suporte.html"><span>SUPORTE</span></a>
+    <a href="regras.html"><span>REGRAS</span></a>
+    <a href="loja.html"><span>LOJA</span></a>
+    <a href="ip.html"><span>IP</span></a>
+    <a href="sobre.html"><span>SOBRE</span></a>
+  </nav>
+</div>
+
+
+  <!-- Seção 3 (Conteúdo) -->
+  <div class="secao secao3" style="background: #262726; padding: 80px 20px 120px;">
+    <div style="text-align: center;">
+      <br><br><br><br><br>
+
+      <h3 style="font-family: Arial, Helvetica, sans-serif; color: yellow; text-shadow: 4px 2px 0px black;">Regras do nosso Servidor:</h3>
+
+      <h5 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">
+        Para manter um ambiente seguro,<br>mantenha o respeito nos chats
+      </h5>
+      <h5 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">
+        não faça spam ou grife o servidor<br>não ultilize hack, Essas ou<br>
+        qualquer tipo de atividades<br>ilegais estará sujeita a penalidade.
+      </h5>
+
+      <br>
+
+      <h3 style="font-family: Arial, Helvetica, sans-serif; color: yellow; text-shadow: 4px 2px 0px black;">Política de Privacidade</h3>
+
+      <p style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 2px 1px 0px black; font-size: 16px; line-height: 1.7;">
+        A sua privacidade é importante para nós.<br>
+        Esta Política de Privacidade explica como coletamos, usamos e protegemos as informações<br>
+        dos jogadores em nosso servidor de Minecraft.
+        <br><br>
+        <strong>Podemos coletar as seguintes informações:</strong><br>
+        - Nome de usuário no Minecraft (nickname)<br>
+        - Endereço IP<br>
+        - Informações de login (horário de entrada/saída)<br>
+        - Estatísticas do jogo (como tempo de jogo, inventário, kills, etc.)<br><br>
+
+        <strong>As informações coletadas são usadas para:</strong><br>
+        - Manutenção e segurança do servidor<br>
+        - Prevenção de trapaças ou violações das regras<br>
+        - Análise de estatísticas internas<br>
+        - Suporte ao jogador e recuperação de contas/inventário
+      </p>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="secao secao4" style="background: #262726; text-align: center; padding: 20px; min-height: 80px;"></div>
+
+  <!-- Script do contador -->
+  <script>
+    function atualizarJogadores() {
+      fetch("https://api.mcsrvstat.us/2/redfenix.minehost.com.br")
+        .then(response => response.json())
+        .then(data => {
+          if (data.online) {
+            document.getElementById("online-players").innerText = data.players.online;
+          } else {
+            document.getElementById("online-players").innerText = "Offline";
+          }
+        })
+        .catch(error => {
+          console.error("Erro ao buscar status do servidor:", error);
+          document.getElementById("online-players").innerText = "Erro";
+        });
+    }
+
+    atualizarJogadores();
+    setInterval(atualizarJogadores, 60000);
+  </script>
+</body>
+</html>
+>>>>>>> e53d6c2 (Primeiro commit do site Redfenix)

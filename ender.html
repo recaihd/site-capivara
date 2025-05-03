@@ -5,6 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
   <title>Redefenix - Pagamento</title>
+  <style>
+    body {
+      background-color: #262726;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    textarea {
+      width: 90%;
+      max-width: 700px;
+      height: 50px;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+      color: #333;
+      resize: none;
+      overflow: hidden;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #copyBtn {
+      background-color: #00c853;
+      color: white;
+    }
+
+    #copyBtn.copiado {
+      background-color: #007e3a;
+    }
+
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+    }
+
+    #popup .popup-content {
+      background-color: white;
+      color: black;
+      max-width: 400px;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    #popup a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    #popup button {
+      background-color: #444;
+      color: white;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body style="background-color: #262726; font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 20px; color: white; text-align: center;">
 
@@ -19,6 +93,20 @@
       00020126550014br.gov.bcb.pix0133valdiraandraderodrigues@gmail.com52040000530398654043.995802BR5925Valdira Andrade Rodrigues6003itu62180514TXvq1ww6wn144263040872
     </textarea><br>
     <button id="copyBtn" onclick="copiarCodigo()" style="margin-top: 10px; padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: #00c853; color: white; cursor: pointer;">Copiar Código</button>
+  </div>
+
+
+  <!-- Botão Já Paguei -->
+  <div style="margin-top: 40px;">
+    <button onclick="abrirPopup()" style="background-color: #ff9800; color: white;">Já Paguei</button>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup">
+    <div class="popup-content">
+      <p><strong>Já comprou?</strong> Abra um ticket no <a href="https://discord.gg/f4WbVRtgfn" target="_blank">Discord</a> usando o <code>-ticket</code> Chame os staff e mostre o comprovante de pagamento e seu nick para darmos o item desejado</p>
+      <button onclick="fecharPopup()">Fechar</button>
+    </div>
   </div>
 
   <script>
@@ -38,6 +126,14 @@
         botao.innerText = "Copiar Código";
         botao.style.backgroundColor = "#00c853";
       }, 2000);
+    }
+
+    function abrirPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function fecharPopup() {
+      document.getElementById("popup").style.display = "none";
     }
   </script>
 

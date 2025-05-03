@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,3 +36,115 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>IP</title>
+  <style>
+    img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Seção 1 (Topo + redes sociais + título + contador) -->
+  <div class="secao secao1">
+    <div class="overlay"></div>
+    <div class="top-bar">
+      <div class="social-icons">
+        <a href="https://discord.gg/f4WbVRtgfn" target="_blank">
+          <img src="https://i.postimg.cc/9X9kdx9t/discord-icon-1024x784-dzjepdg8.png" alt="Discord" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCrtkHq3LK2Puk14FWdRDuVw" target="_blank">
+          <img src="https://i.postimg.cc/7LJcNqGZ/youtube-icon-2048x1437-0zwl4mo9.png" alt="YouTube" />
+        </a>
+        <a href="https://www.tiktok.com/@flymcc" target="_blank">
+          <img src="https://i.postimg.cc/90VT4h40/download-2-removebg-preview.png" alt="Tik Tok" />
+        </a>
+      </div>
+    </div>
+    <h1 class="titulo-centralizado">Redfenix</h1>
+    <div class="contador-online">
+      <div id="online-players" class="numero-jogadores">Carregando...</div>
+      <div class="texto-jogadores">Jogadores Online</div>
+    </div>
+  </div>
+
+  <!-- Seção 2 (Menu) -->
+  <div class="secao secao2">
+    <nav class="menu-links">
+      <h4>
+        <a href="suporte.html"><span>SUPORTE</span></a>
+        <a href="regras.html"><span>REGRAS</span></a>
+        <a href="loja.html"><span>LOJA</span></a>
+        <a href="ip.html"><span>IP</span></a>
+        <a href="sobre.html"><span>SOBRE</span></a>
+      </h4>
+    </nav>
+  </div>
+
+<!-- Seção 3 (Conteúdo da página IP) -->
+<div class="secao secao3" style="background: #262726; padding: 80px 20px 120px;">
+    <div style="text-align: center;">
+
+        <br><br><br><br><br>
+      
+      
+      <h4 style="font-family: Arial, Helvetica, sans-serif; color: yellow; text-shadow: 4px 2px 0px black;">Como Jogar?</h4>
+  
+      <h6 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">
+        Nosso servidor oferece suporte para as
+      </h6>
+      <h6 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">
+        Plataformas Java e Bedrock 1.17 <strong>+</strong>
+      </h6>
+      <br />
+  
+      <img src="https://i.postimg.cc/4Nf17L3t/Java-icon.png" height="70" width="70" style="margin-bottom: 10px;" />
+      <h4 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">Java, IP:</h4>
+      <h4 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black; margin-bottom: 20px;">redfenix.minehost.com.br</h4>
+  
+      <img src="https://i.postimg.cc/NMCqZNpH/logo-minecraft-0-Y6u-Kr.png" height="125" width="125" style="margin: 20px 0;" />
+      <h5 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">Bedrock, IP e Porta:</h5>
+      <h5 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black;">IP: redfenix.minehost.com.br</h5>
+      <h5 style="font-family: Arial, Helvetica, sans-serif; color: white; text-shadow: 4px 2px 0px black; margin-bottom: 30px;">Porta: 35585</h5>
+    </div>
+  </div>
+  
+  <!-- Seção 4 (Rodapé) -->
+  <div class="secao secao4" style="background: #262726; text-align: center; padding: 20px; min-height: 80px;">
+   
+  </div>
+  
+
+  <!-- Script do contador de jogadores -->
+  <script>
+    function atualizarJogadores() {
+      fetch("https://api.mcsrvstat.us/2/redfenix.minehost.com.br")
+        .then(response => response.json())
+        .then(data => {
+          if (data.online) {
+            document.getElementById("online-players").innerText = data.players.online;
+          } else {
+            document.getElementById("online-players").innerText = "Offline";
+          }
+        })
+        .catch(error => {
+          console.error("Erro ao buscar status do servidor:", error);
+          document.getElementById("online-players").innerText = "Erro";
+        });
+    }
+
+    atualizarJogadores();
+    setInterval(atualizarJogadores, 60000);
+  </script>
+</body>
+</html>
+
