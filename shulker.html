@@ -6,52 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
   <title>Redefenix - Pagamento</title>
-</head>
-<body style="background-color: #262726; font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 20px; color: white; text-align: center;">
-
-  <h1 style="text-shadow: 4px 2px 0px black;">Leia o QRCODE com a câmera<br>do celular! 📱</h1>
-
-  <img src="https://i.postimg.cc/qRmn2GtF/qrcode-pix-valdira-46-50.png" alt="QR Code Pix" style="width: 300px; height: 300px; margin: 20px auto;" />
-
-  <div style="margin-top: 30px;">
-    <p style="font-size: 18px; margin-bottom: 10px;">Ou copie o código Pix abaixo:</p>
-    <textarea id="pixCode" readonly
-      style="width: 90%; max-width: 700px; height: 50px; font-size: 14px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background-color: #f5f5f5; color: #333; resize: none; overflow: hidden;">
-      00020126550014br.gov.bcb.pix0133valdiraandraderodrigues@gmail.com52040000530398654046.505802BR5925Valdira Andrade Rodrigues6003itu62180514TXvq1ww6wn14426304ABAA
-    </textarea><br>
-    <button id="copyBtn" onclick="copiarCodigo()" style="margin-top: 10px; padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: #00c853; color: white; cursor: pointer;">Copiar Código</button>
-  </div>
-
-  <script>
-    function copiarCodigo() {
-      const codigo = document.getElementById("pixCode");
-      const botao = document.getElementById("copyBtn");
-      codigo.select();
-      codigo.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-
-      // Atualiza botão
-      botao.innerText = "Código copiado!";
-      botao.style.backgroundColor = "#007e3a";
-
-      // Volta ao estado original após 2 segundos
-      setTimeout(() => {
-        botao.innerText = "Copiar Código";
-        botao.style.backgroundColor = "#00c853";
-      }, 2000);
-    }
-  </script>
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://i.postimg.cc/1XR1pnpk/image.png" type="image/png" />
-  <title>Redefenix - Pagamento</title>
   <style>
     body {
       background-color: #262726;
