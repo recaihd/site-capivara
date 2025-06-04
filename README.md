@@ -4,7 +4,7 @@
 <h1 align="center">Redefenix</h1>
 <h3 align="center">Venha se divertir com<br>a gente no servidor<br>da redefenix</h3>
 <p align="center">
-<img src="https://i.postimg.cc/1XR1pnpk/image.png" />
+<img src="https://i.postimg.cc/1XR1pnpk/image.png" height="50" />
 </p>
 
 
