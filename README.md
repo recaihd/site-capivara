@@ -11,4 +11,3 @@
     <img src="https://i.postimg.cc/1XR1pnpk/image.png" height="40" width="40">
     <p style="color: rgb(235, 234, 234);">© 2025 Redfenix - Todos os direitos reservados</p>
   </div>
-</p>
